@@ -5,6 +5,7 @@ export default defineNuxtSchema({
      */
     resume: {
       $schema: {
+        $schema: "https://json-schema.org/draft/2020-12/schema",
         type: 'object',
         required: [
           'name',
@@ -119,7 +120,7 @@ export default defineNuxtSchema({
                */
               social: {
                 type: 'array',
-                description: 'Social media links and icons that leverage with icones library',
+                description: 'Social media links and icons that leverage https://icones.js.org/ library',
                 items: {
                   type: 'object',
                   required: ['name', 'url', 'icon'],

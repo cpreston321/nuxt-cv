@@ -56,7 +56,7 @@ defineRouteRules({
         </div>
 
         <UiAvatar class="size-28 rounded-md">
-          <UiAvatarImage :alt="resume.name" :src="resume.avatar.url" format="webp" :width="256" :height="256" />
+          <UiAvatarImage v-if="resume.avatar.url" :alt="resume.name" :src="resume.avatar.url" format="webp" :width="256" :height="256" />
           <UiAvatarFallback>{{ resume.avatar.initials }}</UiAvatarFallback>
         </UiAvatar>
       </div>
@@ -70,8 +70,8 @@ defineRouteRules({
 
       <UiSection id="work" v-if="resume.work && Array.isArray(resume.work)">
         <h2 class="text-xl font-bold">Work Experience</h2>
-        <UiCard v-for="work in resume.work" :key="work.company">
-          <UiCardHeader>
+        <UiCard v-for="work in resume.work" :key="work.company" class="border-none shadow-none">
+          <UiCardHeader class="p-0">
             <div class="flex items-center justify-between gap-x-2 text-base">
               <h3 class="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
                 <a class="hover:underline" :href="work.link">
@@ -89,7 +89,7 @@ defineRouteRules({
               {{ work.title }}
             </h4>
           </UiCardHeader>
-          <UiCardContent class="mt-2 text-xs">
+          <UiCardContent class="mt-2 p-0 text-pretty font-mono text-sm text-muted-foreground">
             {{ work.description }}
           </UiCardContent>
         </UiCard>
@@ -97,8 +97,8 @@ defineRouteRules({
 
       <UiSection id="education" v-if="resume.education && Array.isArray(resume.education)">
         <h2 class="text-xl font-bold">Education</h2>
-        <UiCard v-for="education in resume.education" :key="education.school">
-          <UiCardHeader>
+        <UiCard v-for="education in resume.education" :key="education.school" class="border-none shadow-none">
+          <UiCardHeader class="p-0">
             <div class="flex items-center justify-between gap-x-2 text-base">
               <h3 class="font-semibold leading-none">
                 {{ education.school }}
@@ -106,7 +106,7 @@ defineRouteRules({
               <div class="text-sm tabular-nums text-gray-500">{{ education.start }} - {{ education.end }}</div>
             </div>
           </UiCardHeader>
-          <UiCardContent class="mt-2">{{ education.degree }}</UiCardContent>
+          <UiCardContent class="mt-2 p-0 text-pretty font-mono text-sm text-muted-foreground">{{ education.degree }}</UiCardContent>
         </UiCard>
       </UiSection>
 

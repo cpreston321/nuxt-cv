@@ -1,0 +1,28 @@
+{
+  "name": "nuxt-cv-template",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@cpreston321/nuxt-cv": "latest",
+    "nuxt": "^3.11.2",
+    "vue": "^3.4.23",
+    "vue-router": "^4.3.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  },
+  "trustedDependencies": [
+    "@cpreston321/nuxt-cv",
+    "@fortawesome/fontawesome-common-types",
+    "@fortawesome/free-regular-svg-icons",
+    "@fortawesome/free-solid-svg-icons",
+    "json-editor-vue"
+  ]
+}

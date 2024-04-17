@@ -14,7 +14,7 @@ defineProps<Props>()
 
 <template>
   <Card class="flex flex-col overflow-hidden border border-muted p-3">
-    <CardHeader>
+    <CardHeader class="p-0">
       <div class="space-y-1">
         <CardTitle class="text-base">
           <a v-if="link" :href="link" target="_blank" class="inline-flex items-center gap-1 hover:underline">
@@ -31,7 +31,7 @@ defineProps<Props>()
         </CardDescription>
       </div>
     </CardHeader>
-    <CardContent class="mt-auto flex">
+    <CardContent class="mt-auto flex p-0">
       <div class="mt-2 flex flex-wrap gap-1">
         <Badge v-for="tag in tags" :key="tag" class="px-1 py-0 text-[10px]" variant="secondary">
           {{ tag }}

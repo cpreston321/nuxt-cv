@@ -1,22 +1,21 @@
+import { resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+const tailwindCSSPath = fileURLToPath(new URL('./assets/css/tailwind.css', import.meta.url))
+const tailwindConfig = fileURLToPath(new URL('./tailwind.config.ts', import.meta.url))
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  devtools: { enabled: true },
+
   $development: {
     site: {
-      name: 'John Doe | Full Stack Engineer',
-      description: 'Full Stack Engineer focused on building products with extra attention to detail',
       url: 'http://localhost:3000',
     },
   },
 
   experimental: {
     inlineRouteRules: true,
-  },
-
-  devtools: { enabled: true },
-
-  image: {
-    domains: ['avatars.githubusercontent.com', 'gravatar.com'],
-    format: ['avif', 'webp'],
   },
 
   imports: {
@@ -26,10 +25,8 @@ export default defineNuxtConfig({
 
   modules: [
     "@nuxt/fonts",
-    '@nuxt/image',
     '@nuxtjs/seo',
     '@nuxtjs/tailwindcss',
-    'radix-vue/nuxt',
     'nuxt-icon',
     'shadcn-nuxt',
     "@vueuse/nuxt"
@@ -47,6 +44,11 @@ export default defineNuxtConfig({
 
   schemaOrg: {
     enabled: false,
+  },
+
+  tailwindcss: {
+    cssPath: resolve(tailwindCSSPath),
+    configPath: resolve(tailwindConfig),
   },
 
   shadcn: {
