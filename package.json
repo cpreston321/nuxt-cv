@@ -1,7 +1,7 @@
 {
   "name": "@cpreston321/nuxt-cv",
   "type": "module",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
@@ -24,14 +24,16 @@
     "app.vue",
     "nuxt.config.ts",
     "nuxt.schema.ts",
-    "tailwind.config.ts"
+    "tailwind.config.ts",
+    "components.json"
   ],
   "main": "./nuxt.config.ts",
   "keywords": [
     "cv",
     "vue",
     "nuxt",
-    "nuxt3"
+    "nuxt3",
+    "nuxt-layer"
   ],
   "scripts": {
     "build": "nuxt build",
