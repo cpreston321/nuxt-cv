@@ -135,20 +135,3 @@ defineRouteRules({
     <CommandMenu />
   </main>
 </template>
-
-<style scoped>
-@media print {
-  @page {
-    size: auto;   /* auto is the initial value */
-    margin: 0;  /* this affects the margin in the printer settings */
-  }
-
-  #projects h2 {
-    margin-top: .25in;
-  }
-
-  .print-force-new-page {
-    page-break-before: always;
-  }
-}
-</style>

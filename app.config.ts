@@ -49,7 +49,7 @@ export default defineAppConfig({
         start: '2022',
         end: 'Present',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
-        badges: ['Go', 'TypeScript'],
+        badges: ['Remote'],
       },
     ],
     skills: ['JavaScript', 'TypeScript'],
