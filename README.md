@@ -4,10 +4,6 @@ A Nuxt & Vue port of [Bartosz Jarocki's CV web app](https://github.com/BartoszJa
 
 ![Preview](./preview.png)
 
-## Try it out
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/cpreston321/nuxt-cv/tree/main/template?file=app.config.ts)
-
 ## Setup
 
 <!-- automd:pm-x name="giget" args='gh:cpreston321/nuxt-cv/template cv-site' separate no-version-->
